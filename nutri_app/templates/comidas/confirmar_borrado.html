@@ -1,0 +1,6 @@
+<h1>¿Borrar comida?</h1>
+<p>¿Estás seguro de que quieres borrar "{{ object }}"?</p>
+<form method="post">{% csrf_token %}
+    <button type="submit">Sí, borrar</button>
+</form>
+<a href="{% url 'lista_comidas' %}">Cancelar</a>

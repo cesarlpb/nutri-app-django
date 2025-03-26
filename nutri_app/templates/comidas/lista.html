@@ -1,0 +1,14 @@
+<h1>Lista de Comidas</h1>
+<a href="{% url 'crear_comida' %}">Añadir comida</a>
+<ul>
+{% for comida in object_list %}
+    <li>
+        <a href="{% url 'ficha_comida' comida.pk %}">{{ comida.nombre }}</a>
+        - {{ comida.calorias }} kcal
+        [<a href="{% url 'editar_comida' comida.pk %}">Editar</a>]
+        [<a href="{% url 'borrar_comida' comida.pk %}">Borrar</a>]
+    </li>
+{% empty %}
+    <li>No hay comidas registradas.</li>
+{% endfor %}
+</ul>
