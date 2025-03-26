@@ -3,7 +3,8 @@
   <h1>{{ object.nombre }}</h1>
   
   <p>Calorías: {{ object.calorias }}</p>
-  <p>Fecha: {{ object.fecha }}</p>
+  {% comment "formato habitual de fechas en español:" %}{% endcomment %}
+  <p>Fecha: {{ object.fecha|date:"l d F Y" }}</p>
   
   <a href="{% url 'lista_comidas' %}">Volver</a>
 {% endblock %}
