@@ -1,6 +1,11 @@
-<h1>Formulario de comida</h1>
-<form method="post">{% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Guardar</button>
-</form>
-<a href="{% url 'lista_comidas' %}">Volver</a>
+{% extends 'comidas/base.html' %}
+{% block content %}
+  <h1>Formulario de comida</h1>
+  
+  <form method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit">Guardar</button>
+  </form>
+  
+  <a href="{% url 'lista_comidas' %}">Volver</a>
+{% endblock %}
