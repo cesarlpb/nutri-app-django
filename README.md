@@ -281,6 +281,8 @@ python manage.py test comidas
 
 - Si la fecha aún aparece en inglés, activa manualmente el idioma en la vista usando translation.activate('es').
 
+- Recuerda hacer `python manage.py collectstatic` si añades archivos para servir
+
 ## TODO
 
 - Añadir estilos de branding (logo, colores, fuentes, etc.)
